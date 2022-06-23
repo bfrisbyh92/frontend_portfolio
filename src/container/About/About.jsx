@@ -3,29 +3,7 @@ import './About.scss';
 import { images } from '../../constants';
 import { motion } from 'framer-motion';
 import { urlFor, client } from '../../client';
-
-// const abouts = [
-//   {
-//     title: "Full-Stack Development",
-//     description: "I create complex full-stack applications.",
-//     imgUrl: images.about01,
-//   },
-//   {
-//     title: "UI/UX Design",
-//     description: "I create amazing responsive designs.",
-//     imgUrl: images.about02,
-//   },
-//   {
-//     title: "Web3.0",
-//     description: "I love working on Web3.0 projects.",
-//     imgUrl: images.about03,
-//   },
-//   {
-//     title: "Quality",
-//     description: "I take pride in my code so you always get the best.",
-//     imgUrl: images.about04,
-//   }
-// ]
+import { AppWrap } from '../../wrapper';
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -77,4 +55,29 @@ const About = () => {
   )
 }
 
-export default About;
+export default AppWrap(About, 'about');
+
+
+// Saving for now just in case I need to hardcode instead of use sanity.io
+// const abouts = [
+//   {
+//     title: "Full-Stack Development",
+//     description: "I create complex full-stack applications.",
+//     imgUrl: images.about01,
+//   },
+//   {
+//     title: "UI/UX Design",
+//     description: "I create amazing responsive designs.",
+//     imgUrl: images.about02,
+//   },
+//   {
+//     title: "Web3.0",
+//     description: "I love working on Web3.0 projects.",
+//     imgUrl: images.about03,
+//   },
+//   {
+//     title: "Quality",
+//     description: "I take pride in my code so you always get the best.",
+//     imgUrl: images.about04,
+//   }
+// ]
