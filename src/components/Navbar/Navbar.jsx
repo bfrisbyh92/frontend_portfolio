@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import './Navbar.scss';
-import {images} from '../../constants';
+import { images } from '../../constants';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import {motion} from 'framer-motion';
 
-
+const Logo = "https://i.postimg.cc/x1PLDhvT/Brendan-Frisby-logos-black.png"
+// const logo2 = "https://iili.io/hpRBCN.jpg"
+const logo2 = "https://iili.io/hpRJYg.png"
 const Navbar = () => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="nav__navbar">
       <div className="nav__navbar-logo">
-        <img src={images.logo} alt="logo"></img>
+        <img src={logo2} alt="logo" id='logo'></img>
       </div>
       <ul className="app__navbar-links">
         {['home', 'about', 'work', 'skills', 'contact'].map((item, index) => (

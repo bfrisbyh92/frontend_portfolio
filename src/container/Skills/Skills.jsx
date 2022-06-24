@@ -16,10 +16,12 @@ const Skills = () => {
 
     client.fetch(query).then((data) => {
       setExperiences(data);
+      // console.log(data);
     });
 
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
+      // console.log(data);
     });
   }, []);
 
@@ -29,7 +31,7 @@ const Skills = () => {
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          {skills.map((skill) => (
+          {skills?.map((skill, index) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
@@ -47,7 +49,7 @@ const Skills = () => {
           ))}
         </motion.div>
         <div className="app__skills-exp">
-          {experiences.map((experience) => (
+          {experiences?.map((experience, index) => (
             <motion.div
               className="app__skills-exp-item"
               key={experience.year}
@@ -56,7 +58,7 @@ const Skills = () => {
                 <p className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-works">
-                {experience.works.map((work) => (
+                {experience?.works?.map((work, index) => (
                   <>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
@@ -88,4 +90,8 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(Skills, 'skills');
+export default AppWrap(
+  MotionWrap(Skills, 'app__skills'),
+ 'skills',
+ 'app__whitebg'
+);

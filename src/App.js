@@ -8,7 +8,7 @@ import { Navbar } from './components';
 const App = () => {
   return (
     <div className="app">
-      {/* <Navbar /> */}
+      <Navbar />
       <Header />
       <About />
       <Work />
