@@ -20,7 +20,7 @@ const About = () => {
 
   return (
     <>
-    <h2 className="head-text">I Know that <span>Good Development</span> <br />means  <span>Good Business</span></h2>
+    <h2 className="head-text">I know that <span>Good Development</span> <br />means  <span>Good Business</span></h2>
 
       {/* <h2 className="head-text">
         I know that
